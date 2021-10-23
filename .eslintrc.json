@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    // suppress errors for not default export a single function in a file
+    "import/prefer-default-export": "off",
+
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+
+    // allow jsx syntax in js files (should add ".ts" if also use typescript)
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}
