@@ -16,7 +16,14 @@ export const TweetQuoteButton = (props) => {
   }
 
   return (
-    <a href={tweetUrl} className="btn text-white rounded-3 td-1500" style={{ backgroundColor: state.color }} target="_blank" rel="noopener noreferrer">
+    <a
+      href={tweetUrl}
+      className="btn text-white rounded-3 td-1500"
+      id="tweet-quote"
+      style={{ backgroundColor: state.color }}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <i className="fa fa-twitter"></i>
     </a>
   )

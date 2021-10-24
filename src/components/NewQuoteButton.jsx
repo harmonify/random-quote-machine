@@ -15,6 +15,7 @@ export const NewQuoteButton = () => {
     <button
       type="button"
       className="btn text-white rounded-3 td-1500"
+      id="new-quote"
       style={{ backgroundColor: state.color }}
       onClick={handleClick}
     >

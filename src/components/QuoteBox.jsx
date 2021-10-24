@@ -23,6 +23,7 @@ export function QuoteBox () {
       <div className="col-10 text-center align-self-center">
         <blockquote
           className="fs-4 lead fw-normal align-items-center td-1500"
+          id="text"
           style={{ color: state.color }}
         >
           <i className="fa fa-quote-left" />  {!isLoading && quote.content }
@@ -30,6 +31,7 @@ export function QuoteBox () {
       </div>
       <span
         className="lead fs-6 fw-normal align-self-end mb-3 td-1500"
+        id="author"
         style={{ color: state.color }}
       >
         - {!isLoading && quote.author }
