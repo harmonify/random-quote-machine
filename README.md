@@ -1,10 +1,30 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Random Quote Machine
+</div>
+<p align="center">
+<a href="https://harmonify-rqm.netlify.app/" target="_blank"><img src="https://raw.githubusercontent.com/harmonify/random-quote-machine/main/.github/img/preview.png" width="600"></a>
+</p>
+
+This project is a random quote machine I built using React for FreeCodeCamp's Front End Development Libraries Project. This project is hosted on [Netlify](https://harmonify-rqm.netlify.app).
+
+## Tech & API
+
+What I used to build up this project.
+
+### Dependencies
+
+1. [React 17.0.2](https://reactjs.org/)
+2. [Bootstrap 5.1.0](https://getbootstrap.com/)
+3. [Font Awesome Icons 4.3.0](https://fontawesome.com/)
+
+### API
+
+1. [Random Quotes API](https://github.com/lukePeavey/quotable)
 
 ## Available Scripts
 
-In the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). In the project directory, you can run:
 
 ### `npm start`
 
