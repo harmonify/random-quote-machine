@@ -1,9 +1,14 @@
 export const COLORS = [
-  '#27AE60',      // green
-  '#FDF2E2',      // cream
-  '#F29C13',      // yellow
-  '#2C3E50',      // navy
-  '#17A085',      // turquoise
-  '#472E32',      // brown
-  '#9B59B6',      // magenta
+  '#16a085',
+  '#27ae60',
+  '#2c3e50',
+  '#f39c12',
+  '#e74c3c',
+  '#9b59b6',
+  '#FB6964',
+  '#342224',
+  '#472E32',
+  '#BDBB99',
+  '#77B1A9',
+  '#73A857'
 ];
