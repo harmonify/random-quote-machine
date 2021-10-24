@@ -1,11 +1,15 @@
-import './App.css';
-import { Container } from './components/Container.jsx';
 import { Store } from './Store';
+import { Container } from './components/Container.jsx';
+import { QuoteBox } from './components/QuoteBox.jsx';
+import { CreditBox } from './components/CreditBox.jsx';
 
 function App() {
   return (
     <Store>
-      <Container />
+      <Container>
+        <QuoteBox />
+        <CreditBox />
+      </Container>
     </Store>
   );
 }

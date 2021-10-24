@@ -2,9 +2,11 @@
 import React, { createContext, useReducer } from "react";
 import { reducer } from "./reducer";
 import { getRandomColor } from "./utilities/getRandomColor";
+import { getRandomQuote } from "./utilities/getRandomQuote";
 
 const initialState = {
-  color: getRandomColor()
+  color: getRandomColor(),
+  quote: getRandomQuote(),
 };
 export const Context = createContext(initialState);
 
