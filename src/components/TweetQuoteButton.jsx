@@ -14,9 +14,9 @@ export const TweetQuoteButton = (props) => {
   for (let [key, value] of Object.entries(query)) {
     tweetUrl += `${key}=${value}&`
   }
-  
+
   return (
-    <a href={tweetUrl} className="btn text-white rounded-3 td-500" style={{ backgroundColor: state.color }} target="_blank" rel="noopener noreferrer">
+    <a href={tweetUrl} className="btn text-white rounded-3 td-1500" style={{ backgroundColor: state.color }} target="_blank" rel="noopener noreferrer">
       <i className="fa fa-twitter"></i>
     </a>
   )

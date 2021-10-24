@@ -14,9 +14,9 @@ export const NewQuoteButton = () => {
   return (
     <button
       type="button"
-      className="btn text-white rounded-3 td-500"
+      className="btn text-white rounded-3 td-1500"
       style={{ backgroundColor: state.color }}
-      onClick={handleClick}  
+      onClick={handleClick}
     >
       <span>New Quote</span>
     </button>
