@@ -16,7 +16,7 @@ export function QuoteBox() {
         1500
       );
     });
-  });
+  }, [state]);
 
   return (
     <div
@@ -29,7 +29,8 @@ export function QuoteBox() {
           id="text"
           style={{ color: state.color }}
         >
-          <i className="fa fa-quote-left" /> {!state.isLoading && quote.content}
+          <i className="fa fa-quote-left" />{" "}
+          {!state.isLoading && quote?.content}
         </blockquote>
       </div>
       <span
@@ -37,7 +38,7 @@ export function QuoteBox() {
         id="author"
         style={{ color: state.color }}
       >
-        - {!state.isLoading && quote.author}
+        - {!state.isLoading && quote?.author}
       </span>
       <div className="d-flex justify-content-between">
         <TweetQuoteButton quote={!state.isLoading && quote} />

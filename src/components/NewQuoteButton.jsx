@@ -10,6 +10,10 @@ export const NewQuoteButton = () => {
       e.preventDefault();
       dispatch({ type: ACTIONS.UPDATE_BACKGROUND });
       dispatch({ type: ACTIONS.UPDATE_QUOTE });
+      setTimeout(
+        () => dispatch({ type: ACTIONS.UPDATE_LOADING_COMPLETE }),
+        1500
+      );
     }
   }
 
