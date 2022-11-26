@@ -1,7 +1,5 @@
-import { Store } from './Store';
-import { Container } from './components/Container.jsx';
-import { QuoteBox } from './components/QuoteBox.jsx';
-import { CreditBox } from './components/CreditBox.jsx';
+import { Store } from "./Store";
+import { Container, QuoteBox, CreditBox } from "./components";
 
 function App() {
   return (

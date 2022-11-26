@@ -1,6 +1,5 @@
-import { getRandomColor } from "./utilities/getRandomColor";
-import { getRandomQuote } from "./utilities/getRandomQuote";
-import { ACTIONS } from "./config/ACTIONS";
+import { getRandomColor, getRandomQuote } from "./utilities";
+import { ACTIONS } from "./config";
 
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -17,4 +16,4 @@ export const reducer = (state, action) => {
     default:
       return state;
   }
-}
+};

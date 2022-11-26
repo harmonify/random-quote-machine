@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React, { createContext, useReducer } from "react";
 import { reducer } from "./reducer";
-import { getRandomColor } from "./utilities/getRandomColor";
-import { getRandomQuote } from "./utilities/getRandomQuote";
+import { getRandomColor, getRandomQuote } from "./utilities";
 
 const initialState = {
   color: getRandomColor(),

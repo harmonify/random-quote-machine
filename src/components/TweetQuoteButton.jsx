@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import React, { useContext } from 'react';
-import { Context } from '../Store';
+import React, { useContext } from "react";
+import { Context } from "../Store";
 
 export const TweetQuoteButton = (props) => {
   const [state] = useContext(Context);
@@ -9,10 +9,10 @@ export const TweetQuoteButton = (props) => {
   const query = {
     hashtags: "quotes",
     related: "harmonify",
-    text: `${props.quote.content} - ${props.quote.author}`
+    text: `${props.quote.content} - ${props.quote.author}`,
   };
   for (let [key, value] of Object.entries(query)) {
-    tweetUrl += `${key}=${value}&`
+    tweetUrl += `${key}=${value}&`;
   }
 
   return (
@@ -26,5 +26,5 @@ export const TweetQuoteButton = (props) => {
     >
       <i className="fa fa-twitter"></i>
     </a>
-  )
+  );
 };
