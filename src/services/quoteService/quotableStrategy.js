@@ -8,6 +8,14 @@ export class QuotableStrategy {
   async getRandomQuote() {
     const response = await fetch(this.url);
     const data = await response.json();
+
+    if (
+      (response.status >= 400 && response.status <= 599) ||
+      (data.statusCode >= 400 && data.statusCode <= 599)
+    ) {
+      throw new Error("Failed to fetch quotable quote");
+    }
+
     return {
       origin: this.url,
       content: data.content,
@@ -16,4 +24,6 @@ export class QuotableStrategy {
   }
 }
 
-export const quotableStrategy = Object.freeze(new QuotableStrategy(QUOTE_API_URL.QUOTABLE));
+export const quotableStrategy = Object.freeze(
+  new QuotableStrategy(QUOTE_API_URL.QUOTABLE)
+);

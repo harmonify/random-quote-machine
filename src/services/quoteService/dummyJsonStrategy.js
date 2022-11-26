@@ -10,6 +10,11 @@ export class DummyJsonStrategy {
     const url = `${this.baseUrl}/${getRandomInt(1, 100)}`;
     const response = await fetch(url);
     const data = await response.json();
+
+    if (response.status >= 400 && response.status <= 599) {
+      throw new Error("Failed to fetch dummyjson quote");
+    }
+
     return {
       origin: url,
       content: data.quote,
