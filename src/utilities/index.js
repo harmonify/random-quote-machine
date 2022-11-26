@@ -1,2 +1,2 @@
 export * from "./getRandomColor";
-export * from "./getRandomQuote";
+export * from "./getRandomInt";

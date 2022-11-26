@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useContext, useEffect } from "react";
 import { ACTIONS } from "../config";
 import { Context } from "../Store";

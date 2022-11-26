@@ -1,18 +1,20 @@
-/* eslint-disable react/prop-types */
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../Store";
 import { TweetQuoteButton } from "./TweetQuoteButton.jsx";
 import { NewQuoteButton } from "./NewQuoteButton.jsx";
+import { ACTIONS } from "../config";
 
 export function QuoteBox() {
-  const [state] = useContext(Context);
+  const [state, dispatch] = useContext(Context);
   const [quote, setQuote] = useState();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     state.quote.then((r) => {
       setQuote(r);
-      setIsLoading(false);
+      setTimeout(
+        () => dispatch({ type: ACTIONS.UPDATE_LOADING_COMPLETE }),
+        1500
+      );
     });
   });
 
@@ -27,7 +29,7 @@ export function QuoteBox() {
           id="text"
           style={{ color: state.color }}
         >
-          <i className="fa fa-quote-left" /> {!isLoading && quote.content}
+          <i className="fa fa-quote-left" /> {!state.isLoading && quote.content}
         </blockquote>
       </div>
       <span
@@ -35,10 +37,10 @@ export function QuoteBox() {
         id="author"
         style={{ color: state.color }}
       >
-        - {!isLoading && quote.author}
+        - {!state.isLoading && quote.author}
       </span>
       <div className="d-flex justify-content-between">
-        <TweetQuoteButton quote={!isLoading && quote} />
+        <TweetQuoteButton quote={!state.isLoading && quote} />
         <NewQuoteButton />
       </div>
     </div>

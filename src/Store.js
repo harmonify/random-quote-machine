@@ -1,11 +1,12 @@
-/* eslint-disable */
 import React, { createContext, useReducer } from "react";
 import { reducer } from "./reducer";
-import { getRandomColor, getRandomQuote } from "./utilities";
+import { quoteService } from "./services";
+import { getRandomColor } from "./utilities";
 
 const initialState = {
   color: getRandomColor(),
-  quote: getRandomQuote(),
+  quote: quoteService.getRandomQuote(),
+  isLoading: true,
 };
 export const Context = createContext(initialState);
 

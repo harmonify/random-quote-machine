@@ -6,9 +6,11 @@ export const NewQuoteButton = () => {
   const [state, dispatch] = useContext(Context);
 
   function handleClick(e) {
-    e.preventDefault();
-    dispatch({ type: ACTIONS.UPDATE_BACKGROUND });
-    dispatch({ type: ACTIONS.UPDATE_QUOTE });
+    if (!state.isLoading) {
+      e.preventDefault();
+      dispatch({ type: ACTIONS.UPDATE_BACKGROUND });
+      dispatch({ type: ACTIONS.UPDATE_QUOTE });
+    }
   }
 
   return (
@@ -18,6 +20,7 @@ export const NewQuoteButton = () => {
       id="new-quote"
       style={{ backgroundColor: state.color }}
       onClick={handleClick}
+      disabled={state.isLoading}
     >
       <span>New Quote</span>
     </button>

@@ -1,4 +1,5 @@
-import { getRandomColor, getRandomQuote } from "./utilities";
+import { quoteService } from "./services";
+import { getRandomColor } from "./utilities";
 import { ACTIONS } from "./config";
 
 export const reducer = (state, action) => {
@@ -6,12 +7,19 @@ export const reducer = (state, action) => {
     case ACTIONS.UPDATE_BACKGROUND:
       return {
         ...state,
+        isLoading: true,
         color: getRandomColor(),
       };
     case ACTIONS.UPDATE_QUOTE:
       return {
         ...state,
-        quote: getRandomQuote(),
+        isLoading: true,
+        quote: quoteService.getRandomQuote(),
+      };
+    case ACTIONS.UPDATE_LOADING_COMPLETE:
+      return {
+        ...state,
+        isLoading: false,
       };
     default:
       return state;
